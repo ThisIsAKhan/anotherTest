@@ -5,7 +5,7 @@
 from scrapy.spider import BaseSpider
 from scrapy.selector import HtmlXPathSelector
 from scrapy.http import Request
-from PulllinksdataItem.items import PulllinksdataItem
+from linkedinDataItem.items import linkedinDataItem
 
 import sys
 import random
