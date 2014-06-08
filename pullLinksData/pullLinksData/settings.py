@@ -6,18 +6,7 @@
 #     http://doc.scrapy.org/topics/settings.html
 #
 
-BOT_NAME = 'linkedIn'
-BOT_VERSION = '1.0'
-
-SPIDER_MODULES = ['linkedIn.spiders']
-NEWSPIDER_MODULE = 'linkedIn.spiders'
-DEFAULT_ITEM_CLASS = 'linkedIn.items.LinkedinItem'
-USER_AGENT = '%s/%s' % (BOT_NAME, BOT_VERSION)
-
-
-SCHEDULER_ORDER = 'DFO'
-FEED_URI = 'items.json'
-FEED_FORMAT = 'json'
-
-
-ITEM_PIPELINES = ['linkedIn.pipelines.LinkedinPipeline']
+BOT_NAME = 'pullLinksData'
+ 
+SPIDER_MODULES = ['pullLinksData.spiders']
+NEWSPIDER_MODULE = 'pullLinksData.spiders'
