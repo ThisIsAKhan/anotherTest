@@ -5,7 +5,7 @@
 
 from scrapy.item import Item, Field
 
-class PulllinksdataItem(Item):
+class linkedinDataItem(Item):
     # define the fields for your item here like:
     
     url							= Field()
