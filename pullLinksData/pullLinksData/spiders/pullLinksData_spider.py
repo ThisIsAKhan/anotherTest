@@ -5,7 +5,7 @@
 from scrapy.spider import BaseSpider
 from scrapy.selector import HtmlXPathSelector
 from scrapy.http import Request
-from linkedIn.items import linkedInItem
+from PulllinksdataItem.items import PulllinksdataItem
 
 import sys
 import random
@@ -21,7 +21,7 @@ def striplist(l):
         return ([x.strip().replace('\t',"") for x in l])				
 
 
-class linkedInSpider(BaseSpider):
+class PulllinksdataSpider(BaseSpider):
 	name = "linkedin.com"
 	allowed_domains = ["linkedin.com"]
 	start_urls = ["http://www.linkedin.com/directory/people-%s" % s
@@ -38,7 +38,7 @@ class linkedInSpider(BaseSpider):
 		if not hxs.select('//body[@class="guest directory"]'): #if it is not a directory (its a regular page)
 			if hxs.select('//meta[@name="pageImpressionID"]'): 
 
-				item = linkedInItem()		
+				item = PulllinksdataItem()		
 				item ['url']					= response.url
 
                                 # I found that linkedIn changed around their HTML. Furthermore linkedin seems to have .
