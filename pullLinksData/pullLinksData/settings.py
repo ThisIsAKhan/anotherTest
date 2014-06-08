@@ -10,3 +10,4 @@ BOT_NAME = 'pullLinksData'
  
 SPIDER_MODULES = ['pullLinksData.spiders']
 NEWSPIDER_MODULE = 'pullLinksData.spiders'
+DEFAULT_ITEM_CLASS = 'linkedIn.items.linkedinDataItem'
